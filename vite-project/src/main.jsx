@@ -21,13 +21,14 @@ function MyApp(){
 //   },
 //   children:'click to open google'
 // }
-
+const anotherUser='hardy'
 
 const reactElement = React.createElement('a',
   {href:'https://google.com',
     target:'_blank'
   },
-  'click me to visit google'
+  'click me to visit google',
+  anotherUser
 )
 
 const anotherElement=(
@@ -55,6 +56,8 @@ createRoot(document.getElementById('root')).render(
   //yhan is tareeke se reactElement nhi chal sakta tha kyuki vo syntax shi nhi hai is tarah halane ke liye
 
 //ab kar sakte hai reacElement ko use upar jis tareeke se define kia hai vaise react ke render krne ke tareeke se
+
+
   // reactElement,
 
   <React.StrictMode>
