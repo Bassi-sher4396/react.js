@@ -1,4 +1,4 @@
-import { useState,useCallback,useEffect } from 'react'
+import { useState,useCallback,useEffect,useRef } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -25,14 +25,20 @@ pass+=str.charAt(char)
 setPassword(pass)
 },[length,numberAllowed,CharAllowed,setPassword])
   useEffect(()=>{passwordGenerator()},[length,numberAllowed,CharAllowed,passwordGenerator])
+  const passwordRef=useRef(null)
+  const copyPass=useCallback(()=>{
+    passwordRef.current?.select()
+    window.navigator.clipboard.writeText(password)
+    },[password])
 return (
     <>
     <div class='div'><div class='andarla'>
       <input type="text" 
       value={password}
       placeholder='password'
-      readOnly />
-      <button>copy</button>
+      readOnly 
+      ref={passwordRef}/>
+      <button onClick={copyPass}>copy</button>
 
       </div>
       <div>
