@@ -39,5 +39,5 @@ function InputBox( { label,
         </div>
     )
 }
-
+ 
 export default InputBox
