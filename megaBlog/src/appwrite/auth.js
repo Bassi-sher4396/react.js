@@ -57,4 +57,6 @@ async logout(){
 const authService = new AuthService()
 
 export default authService 
+//here appwrite contains methods automaticallyso that we can use them to create new methods like create account login 
 
+//we did this whole shit to make our code future proof so that if we change backennd services we dont face face issues  
