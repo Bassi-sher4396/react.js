@@ -1,4 +1,4 @@
-import conf from '../conf.js'
+import conf from '../conf/conf.js'
 
 import { Client, Account, ID } from "appwrite"
 
@@ -34,7 +34,7 @@ async login({email,password}){
         throw error
     }
 }
-async getCurrUser(){
+async getCurrentUser(){
     try{
 return await this.account.get()
     }
