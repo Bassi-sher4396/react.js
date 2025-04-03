@@ -4,7 +4,7 @@ import {Container, PostForm} from '../components'
 import appwriteService from "../appwrite/config";
 import { useNavigate,  useParams } from 'react-router-dom';
 
-function EditPostPage(){
+function EditPost(){
     const [post,setPost] = useState([])
     const {slug} = useParams()
     const navigate = useNavigate() 
@@ -28,4 +28,4 @@ function EditPostPage(){
         </Container>
     </div> :null
 }
-export default EditPostPage
+export default EditPost
